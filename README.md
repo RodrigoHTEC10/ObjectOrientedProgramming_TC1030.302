@@ -69,9 +69,9 @@ The project **Queretaro's Public Transport Record** will be composed of 7 classe
 
 3. Station
 
-   2.1 Official Station
+   2.1 Official
    
-   2.2 Personalized Station
+   2.2 Personal
 
 5. Record
 
@@ -81,6 +81,10 @@ Through which there will be:
 - Inheritance
 - Aggregation
 
+A preliminary UML diagram of this project is presented below:
 
+<p align="center">
+<img src="PreliminarDiagramProject_RH.png" width="900" />
+</p>
 
 
