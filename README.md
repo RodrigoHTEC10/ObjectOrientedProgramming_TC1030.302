@@ -80,7 +80,14 @@ Through which there will be:
 
 A preliminary UML diagram of this project is presented below:
 
-![PreliminaryDiagramProject_RodrigoHurtado](https://github.com/user-attachments/assets/8e0ea9da-342f-4a72-945c-30daf3afc4db)
+------------------------------------
+'''''''  Under Construction ''''''''
+------------------------------------
 
 
+## Program Usage:
+
+------------------------------------
+'''''''  Under Construction ''''''''
+------------------------------------
 
