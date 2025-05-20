@@ -80,14 +80,13 @@ Through which there will be:
 
 A preliminary UML diagram of this project is presented below:
 
-------------------------------------
-'''''''  Under Construction ''''''''
-------------------------------------
 
+
+*Under Construction ...*
+
+---
 
 ## Program Usage:
 
-------------------------------------
-'''''''  Under Construction ''''''''
-------------------------------------
+*Under Construction ...*
 
