@@ -81,7 +81,8 @@ Through which there will be:
 The UML diagram of this project is presented below:
 
 
-![DiagramProject](https://github.com/user-attachments/assets/9a0d0633-d439-498c-9361-406a271ffd65)
+
+![DiagramProject](https://github.com/user-attachments/assets/dc500d80-f8fc-49ec-941c-5c101318a583)
 
 ---
 
