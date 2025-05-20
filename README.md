@@ -1,11 +1,8 @@
 # Integrative Project: Queretaro's Public Transport Record
 
 ---
-  Author: Rodrigo Alejandro Hurtado Cortes
-  
-  Date: 12 - May - 2025
-  
-  Class: ObjectOrientedProgramming TC1030.302
+
+  Date: 12 - May - 2025  
   
 ---
 
@@ -61,7 +58,7 @@ As a daily user of public transport sometimes it is necessary to take routes out
 
 The project **Queretaro's Public Transport Record** will be composed of 7 classes:
 
-1. Route
+1. Transport
    
    1.1 Bus
    
@@ -83,8 +80,7 @@ Through which there will be:
 
 A preliminary UML diagram of this project is presented below:
 
-<p align="center">
-<img src="PreliminarDiagramProject_RH.png" width="900" />
-</p>
+![PreliminaryDiagramProject_RodrigoHurtado](https://github.com/user-attachments/assets/8e0ea9da-342f-4a72-945c-30daf3afc4db)
+
 
 
