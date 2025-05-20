@@ -78,8 +78,7 @@ Through which there will be:
 - Inheritance
 - Aggregation
 
-A preliminary UML diagram of this project is presented below:
-
+The UML diagram of this project is presented below:
 
 
 ![DiagramProject](https://github.com/user-attachments/assets/9a0d0633-d439-498c-9361-406a271ffd65)
