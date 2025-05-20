@@ -81,8 +81,7 @@ Through which there will be:
 A preliminary UML diagram of this project is presented below:
 
 
-
-*Under Construction ...*
+![DiagramProject](https://github.com/user-attachments/assets/a1a8bf8b-6317-4fae-bad9-42ab229abfac)
 
 ---
 
