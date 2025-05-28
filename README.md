@@ -24,8 +24,8 @@ The taken routes can be registered specifing:
 
 - Route Name (T-01)
 - Color of the route (Orange)
-- Bus Model (Traditional, New Models, Double cabinet, Van)
-- A vector of the stations that the route passes (Each route has a minimum of two stations and more can be added asking the user in specific order from start to finish).
+- Bus Model (Old model,Medium Model,Modern Model, Van)
+- A vector of the stations that the route passes (Each route has a minimum of one stations and more can be added asking the user in specific order from start to finish).
 
 
 <p align="center">
