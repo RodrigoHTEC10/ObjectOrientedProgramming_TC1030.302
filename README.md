@@ -2,7 +2,7 @@
 
 ---
 
-  Date: 20 - May - 2025  
+  Date: 28 - May - 2025  
   
 ---
 
@@ -56,7 +56,7 @@ As a daily user of public transport sometimes it is necessary to take routes out
 
 ## Program decomposition
 
-The project **Queretaro's Public Transport Record** will be composed of 7 classes:
+The project **Queretaro's Public Transport Record** is composed of 7 classes:
 
 1. Transport
    
@@ -77,16 +77,35 @@ The project **Queretaro's Public Transport Record** will be composed of 7 classe
 Through which there will be:
 - Inheritance
 - Aggregation
+- Polymorfism
+- Abstract classes
+- Overloading and Overriding Methods
 
 The UML diagram of this project is presented below:
 
 
+![DiagramProject](https://github.com/user-attachments/assets/53fb3e7c-7076-424b-aa6f-2cdcb50974db)
 
-![DiagramProject](https://github.com/user-attachments/assets/dc500d80-f8fc-49ec-941c-5c101318a583)
 
 ---
 
 ## Program Usage:
 
-*Under Construction ...*
+The program has a series of default Transports and Stations defined. Within the program there is a menu which shows the six functionalities of the program which allows to:
 
+1. Review all Stations and Transports.
+2. Review all Stations or Transports.
+3. Add a new Station or Transport.
+4. Eliminate a Station or Transport.
+5. Get the information of a specific Station or Transport.
+6. Check Transports between two Stations.
+7. Exit.
+   
+The user will enter a number in the console depending on the function it wants the program to do and follow the instructions of each.
+Pay special attention to the inputs the program ask which will clearly indicate "number" in case it expects a number and "Texts" for names and descriptions.
+
+---
+
+## Disclaimer:
+
+In case of entering a different input type of the expected from the user (E. Entered a "Word" instead of a "number") the program will begin looping itself, in which case it must be forced to stop by canceling the process in the console or IDE being used. 
