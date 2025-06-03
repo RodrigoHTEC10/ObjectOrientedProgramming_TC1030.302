@@ -2,7 +2,7 @@
 
 ---
 
-  Date: 28 - May - 2025  
+  Date: 3 - June - 2025  
   
 ---
 
@@ -74,24 +74,26 @@ The project **Queretaro's Public Transport Record** is composed of 7 classes:
 
 ---
 
-Through which there will be:
+Through which there will be an implementation of:
 - Inheritance
 - Aggregation
 - Polymorfism
 - Abstract classes
 - Overloading and Overriding Methods
+- Overloading Operators
 
 The UML diagram of this project is presented below:
 
 
-![DiagramProject](https://github.com/user-attachments/assets/53fb3e7c-7076-424b-aa6f-2cdcb50974db)
+![DiagramProject](https://github.com/user-attachments/assets/2a72731c-efa6-4bba-9a02-c1486c2974ad)
+
 
 
 ---
 
 ## Program Usage:
 
-The program has a series of default Transports and Stations defined. Within the program there is a menu which shows the six functionalities of the program which allows to:
+The program has a series of default Transports and Stations defined. Within the program there is a menu which shows the seven functionalities of the program which allows the user to:
 
 1. Review all Stations and Transports.
 2. Review all Stations or Transports.
@@ -99,9 +101,11 @@ The program has a series of default Transports and Stations defined. Within the 
 4. Eliminate a Station or Transport.
 5. Get the information of a specific Station or Transport.
 6. Check Transports between two Stations.
-7. Exit.
+7. Change a Station or Transport name. 
+8. Exit.
    
-The user will enter a number in the console depending on the function it wants the program to do and follow the instructions of each.
+The user will enter a number in the console depending on the function it wants the program to implement and follow the instructions of each.
+
 Pay special attention to the inputs the program ask which will clearly indicate "number" in case it expects a number and "Texts" for names and descriptions.
 
 ---
