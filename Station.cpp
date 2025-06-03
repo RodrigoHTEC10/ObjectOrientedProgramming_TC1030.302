@@ -1,6 +1,6 @@
 /*
 Title: Station Cpp File
-Date: May 27, 2025
+Date: June 3, 2025
 Description: 
 Implementation of the Station header file.
 */
@@ -33,11 +33,6 @@ string Station::getName(){
     return name;
 }
 
-/*getDescription() returns the description of the Station as a string.*/
-string Station::getDescription(){
-    return description;
-};
-
 //----------------------------------------------------------
 //Setters
 
@@ -46,8 +41,3 @@ void Station::setName(string name_){
     name = name_;
 };
 
-/*setDescription(string description_) sets the description of the Station
-as description_.*/
-void Station::setDescription(string description_){
-    description = description_;
-};

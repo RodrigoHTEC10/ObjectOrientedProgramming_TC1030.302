@@ -1,6 +1,6 @@
 /*
 Title: Main Cpp File
-Date: May 28, 2025
+Date: June 3, 2025
 Description: 
 The present file is the core of the user interaction and will use
 every single class created and declared below. Additionally, the 
@@ -37,7 +37,8 @@ int mainMenu(){
     cout<<"4. Eliminate a Station or Transport."<<endl;
     cout<<"5. Get the information of a specific Station or Transport."<<endl;
     cout<<"6. Check Transports between two Stations."<<endl;
-    cout<<"7. Exit."<<endl;
+    cout<<"7. Change a Station or Transport name."<<endl;
+    cout<<"8. Exit."<<endl;
     cout<<""<<endl;
     cout<<"Enter the chosen option number:"<<endl;
     cin>>election;
@@ -53,17 +54,18 @@ void selectStationsBtw(Record record){
     int station1;
     int station2;
         
-    cout<<"Avaliable stations: "<<endl;
+    cout<<"In the present section you will choose two of the avaliable stations: "<<endl;
+    cout<<" "<<endl;
     for(int i =0; i<currentSta.size();i++){
         cout<<i+1<<". "+(*currentSta[i]).getName()<<endl;
     }
 
     cout<<" "<<endl;
-    cout<<"Enter the number of the first station to add it: "<<endl;
+    cout<<"Enter the number of the first station: "<<endl;
     cin>>station1;
     if(station1 > 0 && station1 < record.getStation().size()){
         cout<<" "<<endl;
-        cout<<"Enter the number of the first station to add it: "<<endl;
+        cout<<"Enter the number of the second station: "<<endl;
         cin>>station2;
 
         if(station2 > 0 && station2 < record.getStation().size()+1){
@@ -184,7 +186,7 @@ int main(){
     cout<<"Welcome to you Personal Queretaro's Public Transport Record"<<endl;
     cout<<" "<<endl;
     cout<<"The current registered stations and transports are the following: "<<endl;
-    cout<<official.showAll()<<endl;
+    cout<<++official<<endl;
 
 
     /*Cycle of the functionalities of the program, depending on the 
@@ -201,7 +203,7 @@ int main(){
 //----------------------------------------------------------------------
         case 1:{
             cout<<" "<<endl;
-            cout<<official.showAll()<<endl;
+            cout<<++official<<endl;
             cout<<" "<<endl;
         }break;
 
@@ -385,7 +387,7 @@ int main(){
 
         }break;
         
-        /*Eliminating an object*/
+        /*Eliminating a Trannsport or Station object*/
 //----------------------------------------------------------------------
         case 4:{
             
@@ -411,7 +413,7 @@ int main(){
                 cin>>decision;
                 cout<<" "<<endl;
                 if(decision > 0 && decision < official.getStation().size()+1){
-                    official.eliminateStation(decision);
+                    official!=decision;
                 }
                 else{
                     cout<<"Invalid Option. Coming back to Main Menu."<<endl;
@@ -430,7 +432,7 @@ int main(){
                 cin>>decision;
                 cout<<" "<<endl;
                 if(decision > 0 && decision < official.getTransport().size()+1){
-                    official.eliminateTransport(decision);
+                    official-=decision;
                 }
                 else{
                     cout<<"Invalid Option. Coming back to Main Menu."<<endl;
@@ -513,18 +515,97 @@ int main(){
         /*Consulting all the transports that pass between two chosen stations*/
 //----------------------------------------------------------------------
         case 6:{
-
+            cout<<""<<endl;
             selectStationsBtw(official);
 
         }break;
 
-        /*Exiting the while cycle*/
+        /*Change a station or transport name*/
 //----------------------------------------------------------------------
         case 7:{
+            int decision;
+            string newName;
+            cout<<" "<<endl;
+            cout<<"Choose which type of element would you like to rename: "<<endl;
+            cout<<"1. Stations."<<endl;
+            cout<<"2. Transports."<<endl;
+            cout<<"Enter the number of your selection: "<<endl;
+            cin >>decision;
+            cout<<" "<<endl;
+
+            switch (decision)
+            {
+            /*Rename a chosen Station*/
+            //********************************************************************** */
+            case 1:{
+
+                cout<<"Which of the following stations would you like to rename: "<<endl;
+                cout<<official.showAll("Stations")<<endl;
+                cout<<" "<<endl;
+                cout<<"Enter the number of the station: "<<endl;
+                cin>>decision;
+
+                if(decision > 0 && decision < official.getStation().size()+1){
+                    
+                    cout<<" "<<endl;
+                    cout<<"Enter your new Station name: "<<endl;
+                    cin.ignore();
+                    getline(cin, newName);
+                    official.getStation(decision)->setName(newName);
+                }
+                else{
+                    cout<<"Invalid Option. Coming back to Main Menu."<<endl;
+                }
+                
+
+            }break;
+            /*Rename a chosen Transport*/
+            //********************************************************************** */
+            case 2:{
+
+                cout<<"Which of the following transports would you like to rename: "<<endl;
+                cout<<official.showAll("Transports")<<endl;
+                cout<<" "<<endl;
+                cout<<"Enter the number of the transport: "<<endl;
+                cin>>decision;
+
+                if(decision > 0 && decision < official.getTransport().size()+1){
+                    
+                    cout<<"Enter your new Transport name: "<<endl;
+                    cin.ignore();
+                    getline(cin, newName);
+
+                    cout<<" "<<endl;
+                    official.getTransport(decision)->setName(newName);
+                }
+                else{
+                    cout<<"Invalid Option. Coming back to Main Menu."<<endl;
+                }
+
+                
+                
+
+            }break;
+            //********************************************************************** */
+            default:{
+                cout<<"Invalid Option. Coming back to Main Menu."<<endl;
+            }break;
+
+            }
+
+        }break;
+
+
+        /*Exiting the while cycle*/
+//----------------------------------------------------------------------
+        case 8:{
             cout<<""<<endl;
             cout<<"Have a good day!"<<endl;
             finish = true;
         }break;
+
+        /*Default option*/
+//----------------------------------------------------------------------
 
         default:{
             cout<<"Invalid Option"<<endl;

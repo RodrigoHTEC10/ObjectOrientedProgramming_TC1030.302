@@ -1,6 +1,6 @@
 /*
 Title: Transport Header File
-Date: May 27, 2025
+Date: June 3, 2025
 Description: 
 The Transport class is the super class of Bus and Van which stores the shared attributes and gives the common 
 functions among the other subclasses.
@@ -27,14 +27,6 @@ class Bus : public Transport{
         Bus();
 
         Bus(string name_, string color_, string model_, vector<Station*> stations_, int noEntries_);
-
-        //----------------------------------------------------------
-        //Getters
-        int getNoEntries();
-
-        //----------------------------------------------------------
-        //Setters
-        void setNoEntries(int noEntries_);
 
         //----------------------------------------------------------
         //Methods

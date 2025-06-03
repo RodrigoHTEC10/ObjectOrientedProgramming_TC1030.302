@@ -1,6 +1,6 @@
 /*
 Title: Record Header File
-Date: May 27, 2025
+Date: June 3, 2025
 Description: 
 The Record class handles the storing, accessing and removing of the transport routes among the registered bus and van
 Official and Personal stations.
@@ -47,23 +47,17 @@ class Record{
 
 
         //----------------------------------------------------------
-        //Setters
-        void setTransports(vector <Transport*> transports_);
-
-        void setStations(vector <Station*> stations_);
-
-        //----------------------------------------------------------
         //Methods
 
         string addTransport(Transport* transport_);
 
         string addStation(Station* station_);
 
-        string eliminateTransport(int num);
+        string operator-=(int num);
 
-        string eliminateStation(int num);
+        string operator!=(int num);
 
-        string showAll();
+        string operator++();
 
         string showAll(string record);
 

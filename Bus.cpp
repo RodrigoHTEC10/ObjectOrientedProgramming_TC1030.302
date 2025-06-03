@@ -1,6 +1,6 @@
 /*
 Title: Bus Cpp File
-Date: May 27, 2025
+Date: June 3, 2025
 Description: 
 Implementation of the Bus header file.
 */
@@ -22,26 +22,9 @@ Bus::Bus(string name_, string color_, string model_, vector<Station*> stations_,
     noEntries = noEntries_;
 };
 
-//----------------------------------------------------------
-//Getters
-
-/*getNoEntries() returns the number of entries the bus has as an int.*/
-int Bus::getNoEntries(){
-    return noEntries;
-};
-
-//----------------------------------------------------------
-//Setters
-
-/*setNoEntries(int noEntries_) sets the number of entries the bus as the 
-noEntries_ integer.*/
-void Bus::setNoEntries(int noEntries_){
-    noEntries = noEntries_;
-};
 
 //----------------------------------------------------------
 //Methods
-
 
 /*getinfo() returns all the information of the Bus into a string.*/
 string Bus::getInfo(){

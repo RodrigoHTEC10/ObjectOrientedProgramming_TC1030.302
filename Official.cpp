@@ -1,6 +1,6 @@
 /*
 Title: Official Cpp File
-Date: May 27, 2025
+Date: June 3, 2025
 Description: 
 Implementation of the Official header file.
 */
@@ -22,23 +22,6 @@ Official::Official(string name_, string description_, int noRecharge_):Station(n
     noRecharge = noRecharge_;
 };
 
-//----------------------------------------------------------
-//Getters
-
-/*getNoRecharge() returns the number of recharge points of the Official
-station as an integer.*/
-int Official::getNoRecharge(){
-    return noRecharge;
-}
-
-//----------------------------------------------------------
-//Setters
-
-/*setNoRecharge(int num) sets the number of recharge points of the Official
-station as num*/
-void Official::setNoRecharge(int num){
-    noRecharge = num;
-}
 
 //----------------------------------------------------------
 //Methods

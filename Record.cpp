@@ -1,6 +1,6 @@
 /*
 Title: Record Cpp File
-Date: May 27, 2025
+Date: June 3, 2025
 Description: 
 Implementation of the Record Header File methods.
 */
@@ -67,37 +67,6 @@ vector <Station*> Record::getStation(){
 
 
 //----------------------------------------------------------
-//Setters
-
-/*setTransports(vector <Transport*> transports_) takes the elements of
-the vector entered as a parameter (transports_) and push them back
-into the storage vector.*/
-void Record::setTransports(vector <Transport*> transports_){
-    int size = transports.size();
-    for(int i = 0; i < size ; i++){
-        transports.pop_back();
-    }
-    
-    for (int i = 0; i < transports_.size(); i++){
-        transports.push_back(transports_[i]);
-    }
-};
-
-/*setStations(vector <Station*> stations_) takes the elements of the 
-vector entered as a parameter (stations_) and push them back into 
-the storage vector.*/
-void Record::setStations(vector <Station*> stations_){
-    int size = stations.size();
-    for(int i = 0; i < size; i++){
-        Record::stations.pop_back();
-    }
-     
-    for (int i = 0; i < stations_.size(); i++){
-        stations.push_back(stations_[i]);
-    }
-};
-
-//----------------------------------------------------------
 //Methods
 
 /*addTransport(Transport* transport_) allows to add the transport_ 
@@ -116,27 +85,27 @@ string Record::addStation(Station* station_){
     return (*stations[stations.size()-1]).getName()+" has been succesfully added.\n";
 };
 
-/*eliminateTransport(int num) allows to erase from the storage 
+/*operator -=(int num) allows to erase from the storage 
 vector transports, the Transport pointer located at
 the num th place of the vector.
 Returns a string that confirms the process.*/
-string Record::eliminateTransport(int num){
+string Record::operator-=(int num){
     transports.erase(transports.begin()+(num-1));
     return "Tranport eliminated\n";
 };
 
-/*eliminateStation(int num) allows to erase from the storage 
-vector stations, the Station pointer located at the num th place of
+/*operator !=(int num) allows to erase from the storage vector 
+stations, the Station pointer located at the num th place of
 the vector.
 Returns a string that confirms the process.*/
-string Record::eliminateStation(int num){
+string Record::operator!=(int num){
     stations.erase(stations.begin()+(num-1));
     return "Station eliminated\n";
 };
 
-/*showAll() returs all the names of the transports and stations 
-registered into a string.*/
-string Record::showAll(){
+/*operator ++() returs all the names of the transports and stations 
+registered in the record into a string.*/
+string Record::operator++(){
     string text = "Transports registered: \n";
     for (int i = 0; i < transports.size(); i++){
         text = text +to_string(i+1)+ ". "+(*transports[i]).getName() +"\n";
@@ -190,7 +159,7 @@ string Record::showStationInfo(int num){
     return text;
 };
 
-/*transportsBtwStation(Station station1, Station station2) returns 
+/*transportsBtwStation(Station* station1, Station* station2) returns 
 a string which contains all the transports which pass through the
 two Station objects entered as parameters.*/
 string Record::transportsBtwStation(Station* station1, Station* station2){
@@ -201,7 +170,6 @@ string Record::transportsBtwStation(Station* station1, Station* station2){
             transportTrue.push_back(i);
         }
     }
-
     string text = "The transports that pass between "+(*station1).getName() +" and "+(*station2).getName()+":  \n";
     
     if(transportTrue.size() > 0){
@@ -212,8 +180,5 @@ string Record::transportsBtwStation(Station* station1, Station* station2){
     else{
         text = text + "None";
     }
-
-    
-
     return text;
 };

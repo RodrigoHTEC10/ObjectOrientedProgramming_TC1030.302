@@ -1,6 +1,6 @@
 /*
 Title: Official Header File
-Date: May 27, 2025
+Date: June 3, 2025
 Description: 
 The Official station class refers to those stations which were built for the purpose of being an access point to public transport
 in the main avenues of the city. This class stores the specific attribute of number of recharging bus card points as well as its
@@ -27,14 +27,6 @@ class Official : public Station{
         Official();
 
         Official(string name_, string description_, int noRecharge_);
-
-        //----------------------------------------------------------
-        //Getters
-        int getNoRecharge();
-
-        //----------------------------------------------------------
-        //Setters
-        void setNoRecharge(int num);
 
         //----------------------------------------------------------
         //Methods

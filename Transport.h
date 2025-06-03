@@ -1,6 +1,6 @@
 /*
 Title: Transport Header File (Abstract Class)
-Date: May 27, 2025
+Date: June 3, 2025
 Description: 
 The Transport class is the super class of Bus and Van which stores the shared attributes and gives the common 
 functions among the other subclasses.
@@ -35,21 +35,9 @@ class Transport{
         //Getters
         virtual string getName();
 
-        string getColor();
-
-        string getModel();
-
-        vector<Station*> getStations();
-
         //----------------------------------------------------------
         //Setters
         void setName(string name_);
-
-        void setColor(string color_);
-
-        void setModel(string model_);
-
-        void setStations(vector <Station*> stations_);
 
         //----------------------------------------------------------
         //Methods

@@ -1,6 +1,6 @@
 /*
 Title: Transport Cpp File
-Date: May 27, 2025
+Date: June 3, 2025
 Description: 
 Implementation of the Transport header file.
 */
@@ -43,22 +43,6 @@ string Transport::getName(){
 }
 
 
-/*getColor() returns the color of the transport as a string.*/
-string Transport::getColor(){
-    return color;
-};
-
-/*getModel() returns the model of the transport as a string.*/
-string Transport::getModel(){
-    return model;
-};
-
-/*getStations() return the vector of Station pointers that the transport
-passed.*/
-vector<Station*> Transport::getStations(){
-    return stations;
-};
-
 //----------------------------------------------------------
 //Setters
 
@@ -66,30 +50,6 @@ vector<Station*> Transport::getStations(){
 name_.*/
 void Transport::setName(string name_){
     name = name_;
-};
-
-/*setColor(string color_) sets the color of the Tranport as the string
-color_.*/
-void Transport::setColor(string color_){
-    color = color_;
-};
-
-/*setModel(string model_) sets the model of the Tranport as the string
-model_.*/
-void Transport::setModel(string model_){
-    model = model_;
-};
-
-/*setStations(vector <Station*> stations_) sets the stations of the 
-Tranport as elements of the stations_ vector.*/
-void Transport::setStations(vector<Station*> stations_){
-    int size = stations.size();
-    for(int i = 0; i < size; i++){
-        stations.pop_back();
-    }
-    
-    for (int i = 0; i < stations_.size(); i++)
-        stations.push_back(stations_[i]);
 };
 
 //----------------------------------------------------------
@@ -100,6 +60,7 @@ the transport passes through the two Stations pointers entered as parameters.*/
 bool Transport::passesBtw(Station* station1, Station* station2){
     bool station1Part = false;
     bool station2Part = false;
+    
     for(int i = 0; i < stations.size(); i++){
         if((*station1).getName() == (*stations[i]).getName()){
             station1Part = true;
